@@ -1,123 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Naresh | Portfolio</title>
 
-    <style>
+   <style>
+
+        .project-card{
+            border: #f0f5ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #088395;
+            text-align: left;
+        }
+
+        .project-card h3 {
+            color: #071952;
+        }
+
+        .project-card:hover{
+            box-shadow: 0 4px 12px lightgray;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: lightblue;
-            margin: 30px;
-        }
-
-        h1 {
-            color: darkblue;
             text-align: center;
+            margin: 0;
         }
 
-        h2 {
-            color: darkgreen;
-        }
-
-        form {
-            background-color: white;
-            padding: 20px;
-            width: 300px;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px gray;
-        }
-
-        input, select {
-            padding: 10px;
-            margin: 5px;
-            border: 1px solod gray;
-            border-radius: 10px;
-        }
-
-        button:hover {
-           padding: 10px 20px;
-            background-color: darkgreen;
+        header {
+            background-color: darkblue;
             color: white;
-            border: none;
-            border-radius: 10px;
-        }
+            padding: 25px;
+}
+    
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f5ff;
+    margin: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #071952, #088395);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+section {
+    background: white;
+    margin: 25px auto;
+    padding: 25px;
+    width: 85%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px gray;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #071952;
+}
+
+button {
+    background: #088395;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #071952;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    section {
+        width: 90%;
+    }
+}
+nav {
+    background-color:#071952
+    padding: 15px;
+    text-align: center:
+}
+
+nav a {
+    color:white;
+    text-decoration: none;
+    margin:0 10px;
+    font-went: bold;
+
+}
+nav a:hover {
+    coolor:yellow;
+}
+.project-container {
+  display: flex;
+  justify-content:center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+ .project-card {
+    flex: 1 1 250px;
+    min-width: 0px;
+    box-sizing: border-box;
+    background: #f0f5ff;
+    padding: 20px;
+    margin:0;
+    border-radius: 10px;
+    border-left: 5px solid #088395;
+    text-align: center;
+    overflow-wrap: anywhere;
+ }
+ 
+ nav {
+    background-color:darkblue;
+    padding: 15px;
+    text-align: center;
+
+ }
+
+ nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
+
+ }
+
+ nav a:hover{
+    color: yellow;
+ }
+ #contact a {
+    display: inline-block;
+    background-color: darkblue;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-redius: 8px;
+    margin-top: 10px;
+
+ }
+
+ #contact a:hover {
+    background-color: #088395;
+ }
     </style>
 </head>
 
 <body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+       <a href="#skills">Skills</a>
+        <a href="#project">project</a>
+        <a href="#contact">contact</a>
+    </nav>
 
-    <h1>My Website</h1>
+    <header id="home">
+        <h1>Ram Naresh</h1>
+        <p>Diploma Student in Computer Science</p>
+    </header>
 
-    <h2>About Me</h2>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! My name is Ram Naresh.</p>
+        <p>I am learning Web Development.</p>
 
-    <h3>My Education</h3>
+    </section>
 
-    <p>My name is <b>RAM NARESH</b>.</p>
+    <section id=education">
+        <h2>My Education</h2>
+        <p>Government Polytechnic, Kurara, Hamirpur</p>
+        <p>Diploma in Computer Science</p>
+    </section>
 
-    <p>I am studying <strong>Diploma in Computer Science</strong>.</p>
+    <section id="skills">
+        <h2>My Skills</h2>
+        <p>HTML | CSS | JavaScript</p>
+    </section>
 
-    <p>I am learning <i>HTML</i>.<br>
-    I want to become a web developer.</p>
+    <section id="project">
+        <h2>My Projects</h2>
 
-    <h2>My Skills</h2>
+        <div class="project-container">
 
-    <ul>
-        <li>Computer Science</li>
-        <li>Mathematics</li>
-        <li>English</li>
-    </ul>
+            <div class="project-card">
+            <h3>my portfolio website </h3>
+            <p>this is my first  website</p>
+            <p>creating using HTML and CSS.</p>
 
-    <h2>My Form</h2>
+            <div/>
 
-    <form>
+            <div class="poroject-card">
+            <h3>Job portal website</h3>
+            <p>A website to help people find jobs.</p>
+            <p>created using HTML,CSS and javascript.</p>
+        </div>
+    </div>
+</section>
 
-        <label>Name:</label>
-        <input type="text">
+  <sectoin id="contact">
+    <h2>contact me</h2>
+    <p>Email:rn6735710@gmail.com</p>
+    <a
+    href="mailto:rn6735710@gmail.com">Send Email</a>
 
-        <br><br>
+  </sectoin>
 
-        <label>Email:</label>
-        <input type="email">
-
-        <br><br>
-
-        <label>Password:</label>
-        <input type="password">
-
-        <br><br>
-
-        <label>Gender:</label>
-
-        <input type="radio" name="gender"> Male
-        <input type="radio" name="gender"> Female
-
-        <br><br>
-
-        <label>Course:</label>
-
-        <select>
-            <option>Computer Science</option>
-            <option>Electrical</option>
-            <option>Mechanical</option>
-            <option>Civil</option>
-        </select>
-
-        <br><br>
-
-        <button type="submit">Submit</button>
-
-    </form>
-
-         <button onclick="showMassage()">click me</button>
-
-         <p id="Massage"></p>
-
-        <script>
-            function showMassage () {
-                document.getElementbyId("massage").innerHTML="Welcome Ram Naresh!  you are learning javascript.";
-            }
-        </script>
+    </section>
 
 </body>
 </html>
